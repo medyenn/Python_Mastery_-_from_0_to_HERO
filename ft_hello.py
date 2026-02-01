@@ -5,7 +5,8 @@ def main():
     hello(name)
 
 
-def hello(name = "World"):
+def hello(name="World"):
     print(f"Hello, {name} ! \nIt's Very nce to see you !")
+
 
 main()
