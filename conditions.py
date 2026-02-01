@@ -1,5 +1,5 @@
 def main():
-    parity()
+    #use the function you want to test
 
 
 def compariseon():
