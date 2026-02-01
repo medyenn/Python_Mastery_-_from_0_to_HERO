@@ -1,5 +1,9 @@
 def main():
-    #use the function you want to test
+    x = int(input("Enter a number : "))
+    if parity(x):
+        print("The number is EVEN!")
+    else:
+        print("The number ODD!")
 
 
 def compariseon():
@@ -36,12 +40,11 @@ def grader():
         print("Your grade is : F")
 
 
-def parity():
-    x = int(input("Enter a number : "))
-    if x % 2 == 0:
-        print(f"The number {x} is EVEN!")
+def parity(n):
+    if n % 2 == 0:
+        return 1
     else:
-        print(f"The number {x} is ODD!")
+        return 0
 
 
 main()
