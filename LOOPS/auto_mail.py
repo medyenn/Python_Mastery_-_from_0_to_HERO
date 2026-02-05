@@ -1,0 +1,22 @@
+def main():
+    names = ["Mohamed", "Daisy", "Rustin", "Augustin"]
+    for receiver in names:
+        print(send_mail(receiver, "ENNEEX"))
+
+
+def send_mail(receiver, sender):
+    return f"""
+    <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+         Welcome aboard {receiver} (^o^)丿 !
+
+         Thanks for sunscribing, we're
+         thrilled to have you in the loop !
+
+         Sincerly,
+         {sender}
+    <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+                      __________
+    """
+
+
+main()
