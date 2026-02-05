@@ -8,7 +8,7 @@
 /* ╔═════════════════════════════════════════════════════════════════╗ */
 /* ║  ⚡ ENNEEX         ▸		AERO-DATA SYSTEMS ENGINEER	⚡        ║ */
 /* ║  ⚡ Mohamed ENNIH  ▸			enneex0113@gmail.com		⚡    ║ */
-/* ║  ⟡ File		: mario.py									     ║ */
+/* ║  ⟡ File		: grader.py									     ║ */
 /* ║  ⟡ Created	    : 2026-02-05	                                 ║ */
 /* ║  ⟡ Updated	    : 2026-02-05	                                 ║ */
 /* ╚═════════════════════════════════════════════════════════════════╝ */
@@ -16,21 +16,15 @@
 
 
 
-def main():
-    square(3)
-
-
-def column(height):
-    print("|=|\n" * height, end="")
-
-
-def row(width):
-    print("|=|" * width)
-
-
-def square(n):
-    for _ in range(n):
-        row(n)
-
-
-main()
+def grader():
+    score = int(input("What is your score ? "))
+    if score >= 90 and score <= 100:
+        print("Your grade is : A")
+    elif 80 <= score < 90:
+        print("Your grade is : B")
+    elif 70 <= score < 80:
+        print("Your grade is : C")
+    elif 60 <= score < 70:
+        print("Your grade is : E")
+    else:
+        print("Your grade is : F")

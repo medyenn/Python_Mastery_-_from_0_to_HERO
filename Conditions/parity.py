@@ -8,7 +8,7 @@
 /* ╔═════════════════════════════════════════════════════════════════╗ */
 /* ║  ⚡ ENNEEX         ▸		AERO-DATA SYSTEMS ENGINEER	⚡        ║ */
 /* ║  ⚡ Mohamed ENNIH  ▸			enneex0113@gmail.com		⚡    ║ */
-/* ║  ⟡ File		: mario.py									     ║ */
+/* ║  ⟡ File		: parity.py									     ║ */
 /* ║  ⟡ Created	    : 2026-02-05	                                 ║ */
 /* ║  ⟡ Updated	    : 2026-02-05	                                 ║ */
 /* ╚═════════════════════════════════════════════════════════════════╝ */
@@ -17,20 +17,15 @@
 
 
 def main():
-    square(3)
+    x = int(input("Enter a number : "))
+    if parity(x):
+        print("The number is EVEN!")
+    else:
+        print("The number ODD!")
 
 
-def column(height):
-    print("|=|\n" * height, end="")
-
-
-def row(width):
-    print("|=|" * width)
-
-
-def square(n):
-    for _ in range(n):
-        row(n)
+def parity(n):
+    return n % 2 == 0
 
 
 main()

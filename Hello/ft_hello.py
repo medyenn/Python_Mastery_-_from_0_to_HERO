@@ -8,7 +8,7 @@
 /* ╔═════════════════════════════════════════════════════════════════╗ */
 /* ║  ⚡ ENNEEX         ▸		AERO-DATA SYSTEMS ENGINEER	⚡        ║ */
 /* ║  ⚡ Mohamed ENNIH  ▸			enneex0113@gmail.com		⚡    ║ */
-/* ║  ⟡ File		: mario.py									     ║ */
+/* ║  ⟡ File		: ft_hello.py									 ║ */
 /* ║  ⟡ Created	    : 2026-02-05	                                 ║ */
 /* ║  ⟡ Updated	    : 2026-02-05	                                 ║ */
 /* ╚═════════════════════════════════════════════════════════════════╝ */
@@ -16,21 +16,15 @@
 
 
 
+
 def main():
-    square(3)
+    hello()
+    name = input("What's your name ? ")
+    hello(name)
 
 
-def column(height):
-    print("|=|\n" * height, end="")
-
-
-def row(width):
-    print("|=|" * width)
-
-
-def square(n):
-    for _ in range(n):
-        row(n)
+def hello(name="World"):
+    print(f"Hello, {name} ! \nIt's Very nce to see you !")
 
 
 main()

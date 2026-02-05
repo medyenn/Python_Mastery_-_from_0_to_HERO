@@ -8,7 +8,7 @@
 /* ╔═════════════════════════════════════════════════════════════════╗ */
 /* ║  ⚡ ENNEEX         ▸		AERO-DATA SYSTEMS ENGINEER	⚡        ║ */
 /* ║  ⚡ Mohamed ENNIH  ▸			enneex0113@gmail.com		⚡    ║ */
-/* ║  ⟡ File		: mario.py									     ║ */
+/* ║  ⟡ File		: equity.py									     ║ */
 /* ║  ⟡ Created	    : 2026-02-05	                                 ║ */
 /* ║  ⟡ Updated	    : 2026-02-05	                                 ║ */
 /* ╚═════════════════════════════════════════════════════════════════╝ */
@@ -16,21 +16,10 @@
 
 
 
-def main():
-    square(3)
-
-
-def column(height):
-    print("|=|\n" * height, end="")
-
-
-def row(width):
-    print("|=|" * width)
-
-
-def square(n):
-    for _ in range(n):
-        row(n)
-
-
-main()
+def equity():
+    x = int(input("Enter the first value : "))
+    y = int(input("Enter the second value : "))
+    if x != y:
+        print(f"No {x} and {y} are NOT EQUAL!")
+    else:
+        print("Yes the two values are EQUAL!")

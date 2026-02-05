@@ -8,7 +8,7 @@
 /* ╔═════════════════════════════════════════════════════════════════╗ */
 /* ║  ⚡ ENNEEX         ▸		AERO-DATA SYSTEMS ENGINEER	⚡        ║ */
 /* ║  ⚡ Mohamed ENNIH  ▸			enneex0113@gmail.com		⚡    ║ */
-/* ║  ⟡ File		: mario.py									     ║ */
+/* ║  ⟡ File		: calculator.py									 ║ */
 /* ║  ⟡ Created	    : 2026-02-05	                                 ║ */
 /* ║  ⟡ Updated	    : 2026-02-05	                                 ║ */
 /* ╚═════════════════════════════════════════════════════════════════╝ */
@@ -16,21 +16,26 @@
 
 
 
+x = float(input("Enter the first value : "))
+y = float(input("Enter the second value : "))
+
+z = round(x + y)
+
+print(f"{z:,}")
+z = round(x / y, 2)
+print(z)
+
+z = x / y
+print(f"{z:.2f}")
+
+
 def main():
-    square(3)
-
-
-def column(height):
-    print("|=|\n" * height, end="")
-
-
-def row(width):
-    print("|=|" * width)
+    x = int(input("enter the number to be squared :"))
+    print(f"{x} squared is :", square(x))
 
 
 def square(n):
-    for _ in range(n):
-        row(n)
+    return n * n
 
 
 main()
