@@ -7,42 +7,25 @@
 /* ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ */
 /* ╔═════════════════════════════════════════════════════════════════╗ */
 /* ║  ⚡ ENNEEX         ▸		AERO-DATA SYSTEMS ENGINEER	⚡        ║ */
-/* ║  ⚡ Mohamed ENNIH  ▸			enneex0113@gmail.com	⚡        ║ */
-/* ║  ⟡ File		: results.py									 ║ */
-/* ║  ⟡ Created	    : 2026-02-05	                                 ║ */
-/* ║  ⟡ Updated	    : 2026-02-05	                                 ║ */
+/* ║  ⚡ Mohamed ENNIH  ▸			enneex0113@gmail.com   	⚡        ║ */
+/* ║  ⟡ File		: tuples.py									     ║ */
+/* ║  ⟡ Created	    : 2026-02-06	                                 ║ */
+/* ║  ⟡ Updated	    : 2026-02-06	                                 ║ */
 /* ╚═════════════════════════════════════════════════════════════════╝ */
 /* ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ */
 
 
 
-def main():
-    rank()
+# a tuple acts similarly to a list unless in a tuple we can not add, modify or\
+# remove any element
+# it's mostly used when we need a list with fixed values
+# it's more efficient on scale of memory since we get only what we need for\
+# the exact fixed values
 
-
-def rank():
-    results = ["Louis", "Megan", "Travis", "Amenda"]
-    print(results)
-    results.append("Fred")
-    print(results)
-
-    results.append(["Laura", "Joshwa"])
-    print(results)
-
-    results.remove(["Laura", "Joshwa"])
-    print(results)
-
-    results.extend(["Laura", "Joshwa"])
-    print(results)
-
-    results.remove("Amenda")
-    print(results)
-
-    results.insert(1, "Amenda")
-    print(results)
-
-    results.reverse()
-    print(results)
-
-
-main()
+def location():
+    coordinates = (41.8838272094727, -87.6386642456055)
+    # we can't do his : coordinates[0] = 2
+    # Because tuples don't support assignments
+    latitude, longitude = coordinates
+    print(coordinates[0], "=", latitude)
+    print(coordinates[1], "=", longitude)
