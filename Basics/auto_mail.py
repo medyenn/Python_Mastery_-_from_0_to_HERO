@@ -8,17 +8,32 @@
 # ╔═════════════════════════════════════════════════════════════════╗.
 # ║  ⚡ ENNEEX         ▸		AERO-DATA SYSTEMS ENGINEER		⚡     ║.
 # ║  ⚡ Mohamed ENNIH  ▸			enneex0113@gmail.com		⚡     ║.
-# ║  ⟡ File	 	: equity.py	    									║.
+# ║  ⟡ File	 	: auto_mail.py										║.
 # ║  ⟡ Created		: 2026-02-06	                                ║.
 # ║  ⟡ Updated		: 2026-02-06	                                ║.
 # ╚═════════════════════════════════════════════════════════════════╝.
 # ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄.
 
 
-def equity():
-    x = int(input("Enter the first value : "))
-    y = int(input("Enter the second value : "))
-    if x != y:
-        print(f"No {x} and {y} are NOT EQUAL!")
-    else:
-        print("Yes the two values are EQUAL!")
+def main():
+    names = ["Mohamed", "Daisy", "Rustin", "Augustin"]
+    for receiver in names:
+        print(send_mail(receiver, "ENNEEX"))
+
+
+def send_mail(receiver, sender):
+    return f"""
+    <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+         Welcome aboard {receiver} (^o^)丿 !
+
+         Thanks for sunscribing, we're
+         thrilled to have you in the loop !
+
+         Sincerly,
+         {sender}
+    <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+                      __________
+    """
+
+
+main()

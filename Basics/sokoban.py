@@ -8,17 +8,33 @@
 # ╔═════════════════════════════════════════════════════════════════╗.
 # ║  ⚡ ENNEEX         ▸		AERO-DATA SYSTEMS ENGINEER		⚡     ║.
 # ║  ⚡ Mohamed ENNIH  ▸			enneex0113@gmail.com		⚡     ║.
-# ║  ⟡ File	 	: equity.py	    									║.
+# ║  ⟡ File	 	: sokoban.py										║.
 # ║  ⟡ Created		: 2026-02-06	                                ║.
 # ║  ⟡ Updated		: 2026-02-06	                                ║.
 # ╚═════════════════════════════════════════════════════════════════╝.
 # ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄.
 
 
-def equity():
-    x = int(input("Enter the first value : "))
-    y = int(input("Enter the second value : "))
-    if x != y:
-        print(f"No {x} and {y} are NOT EQUAL!")
-    else:
-        print("Yes the two values are EQUAL!")
+def main():
+    game()
+
+
+def game():
+    moves = []
+    while True:
+        move = input("What's your move : ").strip().lower()
+        if move == "undo":
+            undo = moves.pop()
+            print(' -> '.join(moves), "| You've undone :", undo)
+            continue
+        if move == "restart":
+            moves.clear()
+            print(' -> '.join(moves), "| Let's start over :")
+            continue
+        if move == "stop":
+            break
+        moves.append(move)
+        print(' -> '.join(moves))
+
+
+main()

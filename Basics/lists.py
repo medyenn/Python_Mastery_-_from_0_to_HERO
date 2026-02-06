@@ -8,17 +8,19 @@
 # ╔═════════════════════════════════════════════════════════════════╗.
 # ║  ⚡ ENNEEX         ▸		AERO-DATA SYSTEMS ENGINEER		⚡     ║.
 # ║  ⚡ Mohamed ENNIH  ▸			enneex0113@gmail.com		⚡     ║.
-# ║  ⟡ File	 	: equity.py	    									║.
+# ║  ⟡ File	 	: lists.py				    						║.
 # ║  ⟡ Created		: 2026-02-06	                                ║.
 # ║  ⟡ Updated		: 2026-02-06	                                ║.
 # ╚═════════════════════════════════════════════════════════════════╝.
 # ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄.
 
 
-def equity():
-    x = int(input("Enter the first value : "))
-    y = int(input("Enter the second value : "))
-    if x != y:
-        print(f"No {x} and {y} are NOT EQUAL!")
-    else:
-        print("Yes the two values are EQUAL!")
+# Loops for "list" data type :
+# list (like arrays in C, like lists of things in real life):
+#  multiple values in one single variable)
+members = ["Gregory", "Jeremy", "Chandler"]
+for member in members:
+    print(member)
+
+for i in range(len(members)):
+    print(members[i])

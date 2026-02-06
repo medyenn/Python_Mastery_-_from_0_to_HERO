@@ -8,17 +8,40 @@
 # ╔═════════════════════════════════════════════════════════════════╗.
 # ║  ⚡ ENNEEX         ▸		AERO-DATA SYSTEMS ENGINEER		⚡     ║.
 # ║  ⚡ Mohamed ENNIH  ▸			enneex0113@gmail.com		⚡     ║.
-# ║  ⟡ File	 	: equity.py	    									║.
+# ║  ⟡ File	 	: results.py										║.
 # ║  ⟡ Created		: 2026-02-06	                                ║.
 # ║  ⟡ Updated		: 2026-02-06	                                ║.
 # ╚═════════════════════════════════════════════════════════════════╝.
 # ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄.
 
 
-def equity():
-    x = int(input("Enter the first value : "))
-    y = int(input("Enter the second value : "))
-    if x != y:
-        print(f"No {x} and {y} are NOT EQUAL!")
-    else:
-        print("Yes the two values are EQUAL!")
+def main():
+    rank()
+
+
+def rank():
+    results = ["Louis", "Megan", "Travis", "Amenda"]
+    print(results)
+    results.append("Fred")
+    print(results)
+
+    results.append(["Laura", "Joshwa"])
+    print(results)
+
+    results.remove(["Laura", "Joshwa"])
+    print(results)
+
+    results.extend(["Laura", "Joshwa"])
+    print(results)
+
+    results.remove("Amenda")
+    print(results)
+
+    results.insert(1, "Amenda")
+    print(results)
+
+    results.reverse()
+    print(results)
+
+
+main()
