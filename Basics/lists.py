@@ -1,26 +1,17 @@
-# ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄.
-# 		 ███████╗███╗   ██╗███╗   ██╗███████╗███████╗██╗    ██╗      .
-# 		 ██╔════╝████╗  ██║████╗  ██║██╔════╝██╔════╝╚██╗  ██╔╝      .
-# 		 █████╗  ██╔██╗ ██║██╔██╗ ██║█████╗  █████╗    ╚███╔╝        .
-# 		 ██╔══╝  ██║╚██╗██║██║╚██╗██║██╔══╝  ██╔══╝   ██╔  ██╗       .
-# 		 ███████╗██║ ╚████║██║ ╚████║███████╗███████╗██╔╝   ██╗      .
-# ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄.
-# ╔═════════════════════════════════════════════════════════════════╗.
-# ║  ⚡ ENNEEX         ▸		AERO-DATA SYSTEMS ENGINEER		⚡     ║.
-# ║  ⚡ Mohamed ENNIH  ▸			enneex0113@gmail.com		⚡     ║.
-# ║  ⟡ File	 	: lists.py				    						║.
-# ║  ⟡ Created		: 2026-02-06	                                ║.
-# ║  ⟡ Updated		: 2026-02-06	                                ║.
-# ╚═════════════════════════════════════════════════════════════════╝.
-# ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄.
+def lists_specialties():
+    ...
 
 
-# Loops for "list" data type :
-# list (like arrays in C, like lists of things in real life):
-#  multiple values in one single variable)
-members = ["Gregory", "Jeremy", "Chandler"]
-for member in members:
-    print(member)
+def main():
+    # Loops for "list" data type :
+    # list (like arrays in C, like lists of things in real life):
+    #  multiple values in one single variable)
+    members = ["Gregory", "Jeremy", "Chandler"]
+    for member in members:
+        print(member)
 
-for i in range(len(members)):
-    print(members[i])
+    for i in range(len(members)):
+        print(members[i])
+
+
+main()
