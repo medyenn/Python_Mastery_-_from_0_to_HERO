@@ -1,23 +1,12 @@
-# ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄.
-# 		 ███████╗███╗   ██╗███╗   ██╗███████╗███████╗██╗    ██╗      .
-# 		 ██╔════╝████╗  ██║████╗  ██║██╔════╝██╔════╝╚██╗  ██╔╝      .
-# 		 █████╗  ██╔██╗ ██║██╔██╗ ██║█████╗  █████╗    ╚███╔╝        .
-# 		 ██╔══╝  ██║╚██╗██║██║╚██╗██║██╔══╝  ██╔══╝   ██╔  ██╗       .
-# 		 ███████╗██║ ╚████║██║ ╚████║███████╗███████╗██╔╝   ██╗      .
-# ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄.
-# ╔═════════════════════════════════════════════════════════════════╗.
-# ║  ⚡ ENNEEX         ▸		AERO-DATA SYSTEMS ENGINEER		⚡     ║.
-# ║  ⚡ Mohamed ENNIH  ▸			enneex0113@gmail.com		⚡     ║.
-# ║  ⟡ File	 	: dictionaries.py									║.
-# ║  ⟡ Created		: 2026-02-06	                                ║.
-# ║  ⟡ Updated		: 2026-02-06	                                ║.
-# ╚═════════════════════════════════════════════════════════════════╝.
-# ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄.
-
-
 # Loops for "Dictionaries" :
 # It's a data structure that allows us to gather somnthing with something else
 def main():
+    print("===dict specailties===\n")
+
+    dict_specialties()
+    dict_comprehension()
+
+    print("\n\n=== Examples ===\n")
     airplane = {
         "name": "Boeing 747-8",
         # "nick_name": "Queen Of The Skies",  (commented to test the late\
@@ -36,6 +25,87 @@ def main():
     print(aircraft(airplane))
 
     airplanes()
+
+
+def dict_specialties():
+    my_dict = {
+        'a': 36,
+        'b': 74,
+        'c': 74,
+        'a': 59
+    }
+    print(my_dict)
+    # Here we find that dicts save the ORDER, But don't allow DUPLICATES
+    # while it's possible to assign the value to different keys
+
+    # Dictionaries are not indexed, but we can access values using KEYS
+    print(my_dict['c'])
+
+    # Dictionaries are mutable:
+    my_dict['c'] = 18
+    print(my_dict['c'])
+
+    # Dictionaries methods :
+    my_dict = {
+        'id': 1,
+        'age': 26,
+        'city': "Chicago"
+    }
+    # to access a value we need to use the exact key, if we're not
+    # sure about the key the to avoid KeyError, we have to use this method :
+    print(my_dict.get('name', 'unknown'), my_dict.get('age', 'unknown'))
+
+    # we can check if a key is in my dict or not using :
+    print('name' in my_dict, 'age' in my_dict)
+
+    # We can get all the keys or the values or the pairs k:v of our dict using:
+    print('keys: ', my_dict.keys())
+    print('values: ', my_dict.values())
+    print('pairs (key:value)', my_dict.items())
+    # All these are iteratable lists that we can iterate on in loops:
+    for key, value in my_dict.items():
+        print(f"the key: {key}, and the value: {value}")
+
+    # To add a new pair key:value to th dict use :
+    my_dict['new'] = True
+    my_dict['new'] = "already"
+    print(my_dict)
+    my_dict.update({'name': 'Joe', 'Height': 178, 'city': 'New York'})
+    print(my_dict)
+
+    # Now to delete a key:value pair, use:
+    removed = my_dict.pop('new')
+    print(my_dict.get('new', 'deleted'), removed)
+    # If u're not sure if that key exists or not, use :
+    unfound = my_dict.pop('new', 'Not Found')
+    print(my_dict.get('new', 'no key!'), unfound)
+    # if we just want to delete the last item without specifying the key, use:
+    deleted = my_dict.popitem()
+    print(my_dict, deleted)
+
+    # Dictionaries creation:
+    # If we want to create a dict but we still don't know about the values
+    # or we ant to set a default value for all keys we can use :
+    my_dict = dict.fromkeys(['name', 'job', 'company'], None)
+    print(my_dict)
+
+
+def dict_comprehension():
+    user = {
+        'id': 1, 'name': 'joe', 'job': 'engineer', 'age': 28, 'city': 'chicago'
+    }
+
+    new = {}
+    for key, value in user.items():
+        if type(value) is str:
+            new.update({key: value})
+    print(new)
+    new = {
+        k.upper(): v.title()
+        for k, v in user.items()
+        if isinstance(v, str)
+    }
+    print(new)
 
 
 def ft_gpas():
