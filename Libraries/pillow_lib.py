@@ -1,4 +1,4 @@
-from PIL import Image, ImageFilter
+from PIL import Image, ImageFilter, ImageOps
 import requests
 
 
@@ -49,7 +49,7 @@ for item in datas:
 
 eff_im.putdata(new_data)
 eff_im.save("effect_no_bg.png")
-eff_im.thumbnail(image2.size)
+ImageOps.fit(image2, eff_im.size)
 
 base = image2.convert("RGBA")
 base.paste(eff_im, (0, 0), eff_im)
