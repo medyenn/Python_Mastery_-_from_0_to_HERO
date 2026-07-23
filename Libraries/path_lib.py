@@ -10,6 +10,7 @@ print(repr(file.parent))
 print(repr(file))  # shows that this ain't just a str but it's a platform-
 #  aware object
 print(file.exists())
-
+print(file.resolve())
+print(file.resolve().parent.parent.parent.name, 3 * '\n')
 new_file = file.parent / ('new_' + file.stem + file.suffix)
 print(repr(new_file))
